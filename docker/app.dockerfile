@@ -14,4 +14,3 @@ RUN apt-get update && apt-get -y --no-install-recommends install git \
     && rm -rf /var/lib/apt/lists/*
 ADD . /var/www
 RUN chown -R www-data:www-data /var/www/
-RUN chmod 755 /var/www
