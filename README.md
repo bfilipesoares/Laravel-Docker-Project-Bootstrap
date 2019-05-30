@@ -17,8 +17,15 @@ sudo chmod -R ug+rwx storage bootstrap/cache
 Run composer install through container
 
 ```bash
-docker-compose run --user www-data --rm -w /var/www app composer
+docker-compose run --user root --rm -w /var/www app composer
 ```
+
+Create Environment File
+
+```bash
+cp .env.example .env
+```
+
 
 Generate application key
 
