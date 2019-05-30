@@ -12,12 +12,15 @@ Set up permissions
 ```bash
 sudo chgrp -R www-data storage bootstrap/cache
 sudo chmod -R ug+rwx storage bootstrap/cache
+sudo chown -R www-data .
 ```
+
+
 
 Run composer install through container
 
 ```bash
-docker-compose run --user root --rm -w /var/www app composer
+docker-compose run --user www-data --rm -w /var/www app composer
 ```
 
 Create Environment File
